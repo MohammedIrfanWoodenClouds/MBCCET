@@ -534,6 +534,7 @@ ul {
 @media (max-width: 992px) {
   .about-grid, .vm-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
   .hero-title {
     font-size: 3rem;
@@ -550,5 +551,60 @@ ul {
   }
   .hero-btns {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .logos-marquee {
+    gap: 2rem;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .about-text h2.section-title {
+    margin: 0 auto 2rem auto !important;
+    text-align: center !important;
+  }
+  .card {
+    padding: 2rem;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-btns .btn {
+    width: 100%;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .logos-marquee {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .stat-item {
+    padding: 1rem;
   }
 }
