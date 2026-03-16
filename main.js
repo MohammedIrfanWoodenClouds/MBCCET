@@ -66,4 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
             instaGrid.appendChild(post);
         }
     }
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        const slideInterval = 3000; // 3 seconds
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, slideInterval);
+    }
 });

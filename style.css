@@ -199,6 +199,12 @@ ul {
   color: var(--secondary);
 }
 
+.logo img {
+  height: 48px; /* Adjusted size for the logo */
+  width: auto;
+  display: block;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -246,21 +252,35 @@ ul {
   overflow: hidden;
 }
 
-.hero-video-bg {
+/* Hero Slider Styles */
+.hero-slider {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--primary);
   z-index: -2;
+  background: var(--primary);
 }
 
-.hero-video-bg img {
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Dissolve style */
+}
+
+.slide.active {
+  opacity: 0.6; /* Matches the original 0.6 opacity of the hero-bg img */
+}
+
+.slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
 }
 
 .hero-overlay {
